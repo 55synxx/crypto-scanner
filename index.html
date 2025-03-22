@@ -85,11 +85,27 @@
             width: 0;
             height: 100%;
             background-color: green;
-            animation: progress 5s forwards;
+            animation: progress 5s infinite;
         }
         @keyframes progress {
-            from { width: 0; }
-            to { width: 100%; }
+            0% { width: 0; }
+            90% { width: 100%; }
+            100% { width: 0; }
+        }
+        .download-counter {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .warning {
+            color: red;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
         }
     </style>
 </head>
@@ -111,6 +127,11 @@
 
     <div class="progress-bar">
         <div class="progress"></div>
+    </div>
+
+    <div class="download-counter">
+        <p>Скачали софт: <span id="download-count">5071</span> пользователей</p>
+        <p class="warning blink">⚠️ Наш софт скоро взломают! Успей воспользоваться, пока есть шанс. Аналогов нет!</p>
     </div>
 
     <div id="chat">
@@ -150,6 +171,15 @@
 
         // Запуск чата
         addMessage();
+
+        // Счётчик скачиваний
+        let downloadCount = 5071;
+        const downloadElement = document.getElementById('download-count');
+
+        setInterval(() => {
+            downloadCount += Math.floor(Math.random() * 5) + 1; // Увеличиваем на 1-5
+            downloadElement.textContent = downloadCount;
+        }, 5000); // Обновляем каждые 5 секунд
     </script>
 </body>
 </html>
