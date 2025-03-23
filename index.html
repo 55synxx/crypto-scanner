@@ -113,7 +113,7 @@
     <div class="hero">
         <h1>🔍 Find lost funds on your PC in minutes!</h1>
         <p>The software digs through your PC, uncovers forgotten keys, and pulls balances from the network!</p>
-        <a href="https://t.me/your_bot" class="telegram-btn">🚀 Get the software on Telegram</a>
+        <a href="https://t.me/Crypto_Hard_Scannerr_bot" class="telegram-btn">🚀 Get the software on Telegram</a>
     </div>
 
     <div class="features">
@@ -141,9 +141,8 @@
     </div>
 
     <script>
-        // Chat messages
         const messages = [
-            "CryptoKev: Just scanned and found 270 TRX on my system. 😳🔥",
+            "CryptoKev: Just scanned and found 270 TRX on my system.",
             "Vlad17: For real, Kev??",
             "CryptoKev: 100%, try it. Took 5 mins.",
             "Anna_Bit: I just got 0.5 ETH. Didn’t expect that at all!",
@@ -151,88 +150,42 @@
             "MaryLuna: Checked now — got 0.32 ETH out of nowhere.",
             "ivan.eth: Is this for real or just hype? I found 142 TRX.",
             "Annabelle: It’s real. I already withdrew to my wallet.",
-            "Vlad17: How do I download the software?",
             "CryptoKev: Hit the button above. It’s easy from there.",
-            "Sergey_Crypto: Yep, works perfectly.",
-            "MaryLuna: Was skeptical at first, but now I’m shocked 😮",
-            "Sam_BTC: I just scanned, found dust from old wallets.",
-            "JuliaX: How is it finding wallets from my past devices?",
             "RahulTRX: 88 TRX found in an hour! OMG!",
             "Lucas.sol: Guys, this tool is insane. Real scanner vibes.",
-            "SatoshiFan: Is this only for TRX or ETH too?",
             "Anya_Crypto: It supports ETH, TRX, even small BEP20 tokens.",
-            "CryptoDuck: I shared this in my crypto group, they all amazed.",
-            "MikeNode: Bro this tool is 🔥🔥🔥",
-            "Olga007: Found 0.15 ETH. How do I move it to my Metamask?",
+            "MikeNode: Bro this tool is fire!",
+            "Olga007: Found 0.15 ETH. How do I move it to Metamask?",
             "blockbitz: Just use the export option in the software.",
             "Hassan-TRX: Sent a small donation after finding $61!",
-            "Natalie_Coin: Respect to the devs behind this tool 🙌",
-            "RicardoX: Already helped 3 of my friends recover funds.",
-            "Minerva.sol: This is wild. Just sent $13 to my Trust Wallet.",
-            "Kevin007: If this keeps working, I’m tipping the devs BIG time",
-            "ShiroCrypto: Who made this? It’s better than paid recovery tools",
-            "LunaMoon: Anyone tried scanning on a Mac?",
-            "GhostNet: Yep, it works. I ran it via emulator.",
-            "Krishna_TRX: Just scanned — 47 TRX recovered!!",
-            "SashaB: I see the scanner running… how long does it take?",
-            "LilyBabe: Depends, mine took like 3 minutes and BOOM — 0.2 ETH",
-            "ChainSniper: This should be in the news 😂",
-            "0xJames: Donated a coffee via BTC, great project!",
-            "HackerGirl: Just joined. Where can I find the download again?",
-            "MaksimX: Top of chat. Telegram bot link 👉 @Installerr_soft_bot",
-            "BinanceBaby: Does it work with Binance wallets too?",
-            "Nico_BTC: Yup. Any wallet you can import works fine.",
-            "ZahraCrypto: Just hit $98 ETH found. Thank you 🙏",
-            "CyberRonin: People sleeping on this 🔥",
-            "DevShivam: I built similar tools before, but this is 🔝",
-            "MelanieB: Shared the bot in a trading server. Hope they love it too",
-            "iFoundGold: No cap, best find of the month",
-            "ETHwhale19: Already withdrew to Coinbase.",
-            "Daria_X: Should I scan my backup hard drive too?",
-            "MysterioNode: Yes! You’ll be surprised what’s hidden",
-            "JunaidFlash: Sent 0.002 BTC as support ❤️",
-            "Ella_CryptoLife: Who else freaked out when it found coins? 😅",
-            "MarkUpt: Bro this thing is going viral",
-            "TRXman23: Got friends scanning already. Telegram blowing up 😂"
+            "Natalie_Coin: Respect to the devs behind this tool 🙌"
         ];
 
         let index = 0;
         const chatMessages = document.getElementById('chat-messages');
-        const maxMessages = 3; // Show only 3 messages at a time
+        const maxMessages = 3;
 
-        // Function to add a message
         function addMessage() {
-            // If there are already 3 messages, remove the oldest one
             if (chatMessages.children.length >= maxMessages) {
                 chatMessages.removeChild(chatMessages.firstChild);
             }
-
-            // Add new message
             const p = document.createElement('p');
             p.textContent = messages[index];
             chatMessages.appendChild(p);
-
-            // Scroll to the bottom to show the latest message
             chatMessages.scrollTop = chatMessages.scrollHeight;
-
-            // Move to the next message
             index = (index + 1) % messages.length;
-
-            // Add next message after 3 seconds
             setTimeout(addMessage, 3000);
         }
 
-        // Start the chat
         addMessage();
 
-        // Download counter
         let downloadCount = 5071;
         const downloadElement = document.getElementById('download-count');
 
         setInterval(() => {
-            downloadCount += Math.floor(Math.random() * 5) + 1; // Increase by 1-5
+            downloadCount += Math.floor(Math.random() * 5) + 1;
             downloadElement.textContent = downloadCount;
-        }, 5000); // Update every 5 seconds
+        }, 5000);
     </script>
 </body>
 </html>
